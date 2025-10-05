@@ -788,8 +788,25 @@ nav.scrolled {
 footer {
   background: var(--color-secondary);
   color: var(--color-white);
-  text-align: center;
   padding: var(--spacing-lg) var(--container-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  margin: 0;
+  text-align: left;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-height: 20px;
+  width: auto;
 }
 
 /* ==================== MEDIA QUERIES ==================== */
