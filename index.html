@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcademyGlowUp</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.ico">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">AcademyGlowUp</div>
+            <ul class="nav-links">
+                <li><a href="#home">Domů</a></li>
+                <li><a href="#about">O mně</a></li>
+                <li><a href="#portfolio">Služby</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Domů</a></li>
+            <li><a href="#about">O mně</a></li>
+            <li><a href="#portfolio">Služby</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-subtitle">AcademyGlowUp</div>
+            <h1>Transformuj Svůj Život a Dosáhni Svého Plného Potenciálu</h1>
+            <p class="subtitle">Pomáhám lidem objevit jejich vnitřní sílu, najít jasný směr a vytvořit život, který
+                skutečně milují</p>
+            <a href="#portfolio" class="cta-button">Zjistit více</a>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView()"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">O mně</h2>
+            <div class="about-content">
+                <div class="about-image slide-in-left"></div>
+                <div class="about-text slide-in-right">
+                    <h3>Společně vytvoříme cestu k lepšímu "já"</h3>
+                    <p>Jsem certifikovaný kouč a mentor s vášní pro rozvoj lidského potenciálu. Specializuji se na
+                        životní koučink, osobní rozvoj a mentoring, které lidem pomáhají najít jasnost, překonat
+                        překážky a vytvořit život plný smyslu a naplnění.</p>
+                    <p>Věřím, že každý člověk má v sobě jedinečnou sílu a schopnost změnit svůj život k lepšímu. Mým
+                        posláním je být vaším průvodcem na této cestě – podpořit vás, motivovat a poskytnout nástroje,
+                        které vám pomohou dosáhnout vašich cílů.</p>
+                    <p>Když nepracuji s klienty, věnuji se dalšímu vzdělávání, meditaci a hledání inspirace v přírodě a
+                        osobních výzvách.</p>
+                    <div class="skills">
+                        <span class="skill-tag">Životní koučink</span>
+                        <span class="skill-tag">Osobní rozvoj</span>
+                        <span class="skill-tag">Kariérní mentoring</span>
+                        <span class="skill-tag">Stanovení cílů</span>
+                        <span class="skill-tag">Mindfulness</span>
+                        <span class="skill-tag">Životní balance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title fade-in">Moje služby</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-content">
+                        <h4>Individuální koučink</h4>
+                        <p>Osobní setkání zaměřená na vaše specifické cíle a potřeby. Společně vytvoříme plán a
+                            strategii, jak dosáhnout vašich snů a překonat překážky na vaší cestě.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">1:1 setkání</span>
+                            <span class="tech-tag">Online i osobně</span>
+                            <span class="tech-tag">Individuální plán</span>
+                            <span class="tech-tag">Dlouhodobá podpora</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-content">
+                        <h4>Kariérní mentoring</h4>
+                        <p>Pomoc při hledání kariérní cesty, změně zaměstnání nebo rozvoji profesních dovedností.
+                            Společně objevíme vaše talenty a vytvoříme strategii pro profesní úspěch.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Kariérní poradenství</span>
+                            <span class="tech-tag">Rozvoj dovedností</span>
+                            <span class="tech-tag">Work-life balance</span>
+                            <span class="tech-tag">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-content">
+                        <h4>Skupinové workshopy</h4>
+                        <p>Inspirativní workshopy zaměřené na osobní růst, mindfulness a sebepoznání. Ideální pro ty,
+                            kteří hledají komunitní podporu a sdílenou energii.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Skupinové setkání</span>
+                            <span class="tech-tag">Interaktivní cvičení</span>
+                            <span class="tech-tag">Komunitní podpora</span>
+                            <span class="tech-tag">Praktické nástroje</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-content">
+                        <h4>Životní balance program</h4>
+                        <p>Komplexní program zaměřený na harmonii mezi prací, rodinou, zdravím a osobními cíli. Naučte
+                            se efektivně řídit svůj čas a energii.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Time management</span>
+                            <span class="tech-tag">Prioritizace</span>
+                            <span class="tech-tag">Energetická správa</span>
+                            <span class="tech-tag">Zdravé návyky</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-content">
+                        <h4>Mindfulness & Well-being</h4>
+                        <p>Program zaměřený na mentální pohodu, zvládání stresu a rozvoj mindfulness. Objevte sílu
+                            přítomného okamžiku a naučte se žít vědoměji.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Meditační techniky</span>
+                            <span class="tech-tag">Stres management</span>
+                            <span class="tech-tag">Emoční inteligence</span>
+                            <span class="tech-tag">Sebepéče</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image"></div>
+                    <div class="portfolio-content">
+                        <h4>Transformační programy</h4>
+                        <p>Intenzivní dlouhodobé programy pro ty, kteří jsou připraveni na hlubokou osobní transformaci
+                            a chtějí zásadně změnit svůj život k lepšímu.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">3-6 měsíční program</span>
+                            <span class="tech-tag">Hluboká transformace</span>
+                            <span class="tech-tag">VIP podpora</span>
+                            <span class="tech-tag">Osobní růst</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-floating-shapes">
+            <div class="contact-shape contact-shape-1"></div>
+            <div class="contact-shape contact-shape-2"></div>
+            <div class="contact-shape contact-shape-3"></div>
+            <div class="contact-shape contact-shape-4"></div>
+            <div class="contact-shape contact-shape-5"></div>
+            <div class="contact-shape contact-shape-6"></div>
+        </div>
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title fade-in">Začněme společně</h2>
+                <p class="fade-in">Jste připraveni na změnu? Kontaktujte mě a společně vytvoříme cestu k vašim cílům.
+                    Těším se na setkání s vámi a na možnost být součástí vaší transformační cesty.</p>
+                <form class="contact-form fade-in">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Jméno</label>
+                            <input type="text" id="name" name="name" placeholder="Vaše jméno" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="vas.email@priklad.cz" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Předmět</label>
+                        <input type="text" id="subject" name="subject" placeholder="O čem to je?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Zpráva</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Napište mi, jak vám mohu pomoci..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Odeslat zprávu</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-info-list">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img src="images/emailICO.png" alt="Email">
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:your.email@example.com">your.email@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img src="images/phoneICO.png" alt="Telefon">
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefon</h4>
+                                <a href="tel:+420123456789">+420 123 456 789</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img src="images/mediaICO.png" alt="Sociální media">
+                            </div>
+                            <div class="contact-details">
+                                <h4>Sociální sítě</h4>
+                                <div class="social-links">
+                                    <a href="https://www.instagram.com/fakenberg.academy" target="_blank"
+                                        rel="noopener">
+                                        <img src="images/instagramICO.png" alt="Instagram">
+                                        Instagram
+                                    </a>
+                                    <a href="https://www.facebook.com/people/Petra-Fakenberg-GlowUp/pfbid02P6bLwimZMNFLdcYLVyLMQSuaoegfiZ6qdrHW7BNuUcMjPQFs5eP5b6QF7qxrckXSl/"
+                                        target="_blank" rel="noopener">
+                                        <img src="images/facebookICO.png" alt="Facebook">
+                                        Facebook
+                                    </a>
+                                    <a href="https://youtube.com/@academyglowup?si=-lUvwi0KTJg-dXAz" target="_blank"
+                                        rel="noopener">
+                                        <img src="images/youtubeICO.png" alt="YouTube">
+                                        YouTube
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 AcademyGlowUp. Všechna práva vyhrazena.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#terms">Zásady o zpracování osobních údajů</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
