@@ -7,17 +7,22 @@
     <title>Academy GlowUp - Koučování na míru</title>
     <link rel="icon" type="image/svg+xml" href="images/logo.ico">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav>
+    <nav id="navbar">
         <img src="images/logo.png" alt="Academy GlowUp Logo" class="logo">
-        <ul class="nav-links">
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#home">Domů</a></li>
             <li><a href="#about">O mně</a></li>
-            <li><a href="#offerings">Koučování & E-booky</a></li>
+            <li><a href="#offerings">Zdarma</a></li>
+            <li><a href="services.html">Služby</a></li>
             <li><a href="#contact">Kontakty</a></li>
         </ul>
     </nav>
@@ -25,7 +30,6 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-container">
-            <!-- Textová část -->
             <div class="hero-content">
                 <h1>Online koučování a kurzy na míru</h1>
                 <p class="hero-subtitle">Vyhni se začátečnickým chybám</p>
@@ -49,7 +53,6 @@
                 <a href="#offerings" class="hero-cta">Zjistit více</a>
             </div>
 
-            <!-- Fotka -->
             <div class="hero-photo">
                 <img src="images/petra.png" alt="Petra Fakenberg">
                 <div class="hero-nameplate">
@@ -61,7 +64,6 @@
     </section>
 
     <!-- About Section -->
-
     <section class="about fade-in" id="about">
         <div class="about-container">
             <div class="about-text">
@@ -87,8 +89,7 @@
                         životních zkušenostech, ale i ověřených informacích.</p>
                 </div>
 
-                <h3>Hodnoty, podle kterých
-                    se řídím:</h3>
+                <h3>Hodnoty, podle kterých se řídím:</h3>
                 <div class="value-tags">
                     <span class="value-tag">Vědomý život</span>
                     <span class="value-tag">Laskavost k sobě</span>
@@ -105,8 +106,7 @@
                         allowfullscreen class="lazy-iframe"></iframe>
                 </div>
                 <p class="video-description">Podívejte se na mou osobní zpověď - mou cestu od nemocí a neplodnosti k
-                    zdraví, energii a životní spokojenosti. Otevřeně sdílím svůj příběh, který mě posílil a inspiroval k
-                    životní proměně, a ukazuji, jak jsem překonala těžké životní zkoušky a našla svou sílu.</p>
+                    zdraví, energii a životní spokojenosti.</p>
                 <div class="video-container">
                     <iframe data-src="https://www.youtube.com/embed/3tc4CE2mdBw?si=v_O1alLQekqdTNi4" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -117,11 +117,11 @@
         </div>
     </section>
 
-    <!-- Offerings Section -->
+    <!-- Free Offerings Section -->
     <section class="offerings" id="offerings">
         <div class="offerings-container">
-            <h2>Od této chvíle Tě už nic nezastaví</h2>
-            <p class="offerings-subtitle">Společně nastavíme kroky, které tě dovedou k vašemu cíli</p>
+            <h2>Začni s materiály zdarma</h2>
+            <p class="offerings-subtitle">Stáhni si užitečné materiály a poznej můj přístup</p>
 
             <div class="offerings-grid">
                 <!-- Check list ZDARMA -->
@@ -136,17 +136,14 @@
                         <li>Mentální příprava</li>
                         <li>Okamžitě ke stažení</li>
                     </ul>
-
-                    <a href="files/Jak_eliminovat_stres_pred_zkouskou_nebo_pracovnim_pohovorem.pdf"
-                        class="offering-btn">Stáhnout Zdarma</a>
+                    <button class="offering-btn" onclick="openPopup('checklist')">Stáhnout Zdarma</button>
                 </div>
 
                 <!-- E-book ZDARMA -->
                 <div class="offering-card" style="border: 3px solid #6b9e78;">
                     <h3>E-book ZDARMA</h3>
                     <div class="price" style="color: #d4af37;">ZDARMA</div>
-                    <p>Deset potravin, které podpoří vaši plodnost - jednoduché a praktické tipy pro ženy, které
-                        chtějí
+                    <p>Deset potravin, které podpoří vaši plodnost - jednoduché a praktické tipy pro ženy, které chtějí
                         podpořit své tělo.</p>
                     <ul class="offering-features">
                         <li>10 potravin pro plodnost</li>
@@ -154,155 +151,63 @@
                         <li>Praktické tipy k zařazení</li>
                         <li>Okamžitě ke stažení</li>
                     </ul>
-                    <a href="files/Deset_potravin_ktere_podpori_vasi_plodnost-e-book-ZDARMA.pdf" class="offering-btn"
-                        download>Stáhnout zdarma</a>
+                    <button class="offering-btn" onclick="openPopup('ebook')">Stáhnout Zdarma</button>
                 </div>
+            </div>
 
-                <!-- Nadstandardní měsíční balíček -->
-                <div class="offering-card featured">
-                    <h3>Online Koučink & Výživové Poradenství</h3>
-                    <div class="price">8 400 Kč</div>
-                    <p>Nadstandardní měsíční balíček - jedna služba, celý člověk. Když chcete změnu, která
-                        skutečně
-                        vydrží.</p>
-                    <ul class="offering-features">
-                        <li>4x konzultace přes ZOOM (60 min)</li>
-                        <li>4x pracovní list na míru</li>
-                        <li>4x e-mailová podpora mezi konzultacemi</li>
-                        <li>Výživa podle ženského cyklu</li>
-                        <li>Afirmace a meditační cvičení</li>
-                    </ul>
-                    <a href="#" class="offering-btn">Mám zájem</a>
-                </div>
-
-                <!-- Kompletní konzultace -->
-                <div class="offering-card">
-                    <h3>Kompletní Online Konzultace</h3>
-                    <div class="price">2 199 Kč</div>
-                    <p>Jedno sezení, které pokryje celek. Propojení výživy, emocí, těla i cykličnosti.</p>
-                    <ul class="offering-features">
-                        <li>60 minut hluboké konzultace</li>
-                        <li>Pracovní list na míru po konzultaci</li>
-                        <li>Konkrétní doporučení a úkoly</li>
-                        <li>Individuální přístup</li>
-                    </ul>
-                    <a href="#" class="offering-btn">Mám zájem</a>
-                </div>
-
-                <!-- Tichý kouč měsíční -->
-                <div class="offering-card">
-                    <h3>Tichý Kouč - Měsíční Vedení</h3>
-                    <div class="price">1 990 Kč</div>
-                    <p>Pravidelná podpora e-mailem celým měsícem. Ideální pro ty, kdo preferují psaní.</p>
-                    <ul class="offering-features">
-                        <li>4x individuální e-mailové odpovědi</li>
-                        <li>Každý týden po dobu měsíce</li>
-                        <li>Reflexní otázky a úkoly</li>
-                        <li>Souhrnný přehled v PDF zdarma</li>
-                    </ul>
-                    <a href="#" class="offering-btn">Mám zájem</a>
-                </div>
-
-                <!-- Mini balíček -->
-                <div class="offering-card">
-                    <h3>Mini Online Balíček</h3>
-                    <div class="price">990 Kč</div>
-                    <p>Jemný začátek s konkrétním výsledkem. Ochutnejte styl spolupráce.</p>
-                    <ul class="offering-features">
-                        <li>1x konzultace (30 minut)</li>
-                        <li>Mini doporučení na míru e-mailem</li>
-                        <li>Zaměření na konkrétní problém</li>
-                        <li>Možnost navázat větším balíčkem</li>
-                    </ul>
-                    <a href="#" class="offering-btn">Mám zájem</a>
-                </div>
-
-                <!-- Tichý kouč jednorázový -->
-                <div class="offering-card">
-                    <h3>Tichý Kouč - Jednorázové Vedení</h3>
-                    <div class="price">590 Kč</div>
-                    <p>Podpora bez setkání, ale s plnou pozorností. Napište e-mail, získejte odpověď do 3 dnů.
-                    </p>
-                    <ul class="offering-features">
-                        <li>1x e-mail s osobní odpovědí</li>
-                        <li>Individuální vedení a doporučení</li>
-                        <li>Malé cvičení nebo tip</li>
-                        <li>Zcela diskrétní prostor</li>
-                    </ul>
-                    <a href="#" class="offering-btn">Mám zájem</a>
-                </div>
-
-                <!-- Jídelníčky -->
-                <div class="offering-card">
-                    <h3>Jídelníček na Míru</h3>
-                    <div class="price">od 2 199 Kč</div>
-                    <p>Konkrétní plán s recepty, nákupním seznamem a vysvětlením.</p>
-                    <ul class="offering-features">
-                        <li>Jídelníček na 7 dní: 2 199 Kč</li>
-                        <li>Jídelníček na 14 dní: 3 899 Kč</li>
-                        <li>Nákupní seznam</li>
-                        <li>Vysvětlení a tipy</li>
-                    </ul>
-                    <a href="#" class="offering-btn">Mám zájem</a>
-                </div>
-
-                <!-- E-book -->
-                <div class="offering-card">
-                    <h3>E-book: Tajemství Úspěšného Početí</h3>
-                    <div class="price">690 Kč</div>
-                    <p>Praktický e-book pro ženy na cestě k míminkům. Zaváděcí sleva 30% – jen prvních 25 kusů!
-                    </p>
-                    <ul class="offering-features">
-                        <li>130 A4 stran hodnotného obsahu</li>
-                        <li>Jídelníček na 7 dní</li>
-                        <li>Recepty a techniky</li>
-                        <li>Pracovní listy v PDF</li>
-                    </ul>
-                    <a href="#" class="offering-btn">Chci e-book</a>
-                </div>
-
-                <!-- Kurz svalovky -->
-                <div class="offering-card">
-                    <h3>Minikurz: Jak Zvládnout Svalovku a Zůstat Motivovaný</h3>
-                    <div class="price">690 Kč <span
-                            style="text-decoration: line-through; font-size: 1.2rem; opacity: 0.7;">890
-                            Kč</span></div>
-                    <p>Začali jste cvičit a teď vás zastavila svalovka? Tento kurz vám ukáže, jak bolest
-                        zvládnout a
-                        hlavně zůstat motivovaní!</p>
-                    <ul class="offering-features">
-                        <li>Chytrá regenerace a prevence</li>
-                        <li>3denní regenerační protokol</li>
-                        <li>Strava, smoothie a afirmace</li>
-                        <li>90denní výzva plná micro wins</li>
-                    </ul>
-                    <a href="#" class="offering-btn">Koupit kurz</a>
-                </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="services.html" class="hero-cta">Prozkoumat placené služby</a>
             </div>
         </div>
     </section>
+
+    <!-- Popup Modal -->
+    <div id="downloadPopup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <h2>Stáhnout materiál zdarma</h2>
+            <p>Vyplňte prosím své údaje pro stažení materiálu</p>
+            <form id="downloadForm" class="popup-form">
+                <div class="form-group">
+                    <label for="userName">Jméno a příjmení *</label>
+                    <input type="text" id="userName" name="userName" required>
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">E-mail *</label>
+                    <input type="email" id="userEmail" name="userEmail" required>
+                </div>
+                <button type="submit" class="popup-submit">Stáhnout materiál</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Social Section -->
     <section class="social" id="contact">
         <h2>Pojďme zůstat v kontaktu</h2>
         <div class="social-links">
-            <a href="#" class="social-link"><img src="images/instagramICO.png"></a>
-            <a href="#" class="social-link"><img src="images/facebookICO.png"></a>
-            <a href="#" class="social-link"><img src="images/youtubeICO.png"></a>
+            <a href="#" class="social-link"><img src="images/instagramICO.png" alt="Instagram"></a>
+            <a href="#" class="social-link"><img src="images/facebookICO.png" alt="Facebook"></a>
+            <a href="#" class="social-link"><img src="images/youtubeICO.png" alt="YouTube"></a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Academy GlowUp. Všechna práva vyhrazena.</p>
-        <div class="footer-logo">
-            <a href="https://stebex.cz/">
-                <img src="https://imagedelivery.net/TtlFh2d-eb4ze5NHgekWCg/62abbdec-cbc3-45a1-6701-8a6b4ed2b800/public"
-                    alt="Stebex logo">
-            </a>
+        <div class="footer-background"></div>
+        <div class="footer-content container">
+            <p>&copy; 2025 Academy GlowUp. Všechna práva vyhrazena.</p>
+            <div class="footer-logo">
+                <a href="https://stebex.cz/">
+                    <img src="https://imagedelivery.net/TtlFh2d-eb4ze5NHgekWCg/62abbdec-cbc3-45a1-6701-8a6b4ed2b800/public"
+                        alt="Stebex logo">
+                </a>
+            </div>
         </div>
     </footer>
-    <script src="index.js" defer></script>
+
+    <script src="smooth-loading.js" defer></script>
+    <script src="hamburger.js" defer></script>
+    <script src="popup.js" defer></script>
 </body>
 
 </html>
