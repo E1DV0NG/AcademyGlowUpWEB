@@ -185,18 +185,36 @@
                     <label for="userEmail">E-mail *</label>
                     <input type="email" id="userEmail" name="userEmail" required>
                 </div>
+
+                <div class="gdpr-checkbox">
+                    <input type="checkbox" id="gdprConsent" name="gdprConsent" required>
+                    <label for="gdprConsent">
+                        Souhlasím se <a href="gdpr.html" target="_blank">zásadami ochrany osobních údajů</a> *
+                    </label>
+                </div>
+
+                <div class="gdpr-checkbox">
+                    <input type="checkbox" id="marketingConsent" name="marketingConsent">
+                    <label for="marketingConsent">
+                        Souhlasím se zasíláním obchodních sdělení a novinek
+                    </label>
+                </div>
+
                 <button type="submit" class="popup-submit">Stáhnout materiál</button>
             </form>
         </div>
     </div>
 
     <!-- Social Section -->
-    <section class="social" id="contact">
+    <section class="social">
         <h2>Pojďme zůstat v kontaktu</h2>
         <div class="social-links">
-            <a href="#" class="social-link" target="_blank"><img src="images/instagramICO.png" alt="Instagram"></a>
-            <a href="#" class="social-link" target="_blank"><img src="images/facebookICO.png" alt="Facebook"></a>
-            <a href="#" class="social-link" target="_blank"><img src="images/youtubeICO.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/fakenberg.academy/" class="social-link" target="_blank"><img
+                    src="images/instagramICO.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/people/Petra-Fakenberg-GlowUp/pfbid02P6bLwimZMNFLdcYLVyLMQSuaoegfiZ6qdrHW7BNuUcMjPQFs5eP5b6QF7qxrckXSl/"
+                class="social-link" target="_blank"><img src="images/facebookICO.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/channel/UCGDH2OtCP9glclqwubEzJfg" class="social-link" target="_blank"><img
+                    src="images/youtubeICO.png" alt="YouTube"></a>
         </div>
     </section>
 
@@ -212,12 +230,15 @@
                         alt="Stebex logo">
                 </a>
             </div>
+            <div class="footer-gdpr">
+                <a href="gdpr.html">Zásady ochrany osobních údajů</a>
+            </div>
         </div>
     </footer>
 
     <script src="js/smooth-loading.js" defer></script>
     <script src="js/hamburger.js" defer></script>
-    <script src="js/popup.js" defer></script>
+    <script src="js/email-handler.js" defer></script>
 </body>
 
 </html>
