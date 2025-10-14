@@ -4,15 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academy GlowUp - Koučování na míru</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Academy GlowUp - Online Koučování, Výživové Poradenství & Lifestyle | Petra Fakenberg</title>
+    <meta name="description"
+        content="Profesionální online koučování a výživové poradenství pro ženy i muže. Objevte cestu ke zdraví, rovnováze a vnitřní síle s lektorkou Petrou Fakenberg.">
+    <meta name="keywords"
+        content="online koučování, výživové poradenství, lifestyle kouč, zdravý životní styl, ženský cyklus, plodnost, mindset, wellness, Petra Fakenberg">
+    <meta name="author" content="Petra Fakenberg">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Czech">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Academy GlowUp - Online Koučování & Výživové Poradenství">
+    <meta property="og:description"
+        content="Profesionální online koučování a výživové poradenství. Cesta ke zdraví, rovnováze a vnitřní síle.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://academyglowup.cz">
+    <meta property="og:image" content="https://academyglowup.cz/images/petra.png">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:site_name" content="Academy GlowUp">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Academy GlowUp - Online Koučování">
+    <meta name="twitter:description"
+        content="Profesionální online koučování a výživové poradenství pro lepší životní styl.">
+    <meta name="twitter:image" content="https://academyglowup.cz/images/petra.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://academyglowup.cz">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/logo.ico">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style/style.css">
+
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Academy GlowUp",
+      "url": "https://academyglowup.cz",
+      "logo": "https://academyglowup.cz/images/logo2.png",
+      "description": "Profesionální online koučování a výživové poradenství",
+      "founder": {
+        "@type": "Person",
+        "name": "Petra Fakenberg",
+        "jobTitle": "Lektorka a Koučka Lifestyle"
+      },
+      "sameAs": [
+        "https://www.instagram.com/fakenberg.academy/",
+        "https://www.facebook.com/people/Petra-Fakenberg-GlowUp/",
+        "https://www.youtube.com/channel/UCGDH2OtCP9glclqwubEzJfg"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "availableLanguage": "Czech"
+      }
+    }
+    </script>
+
+    <!-- Structured Data - Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Petra Fakenberg",
+      "jobTitle": "Lektorka a Koučka Lifestyle",
+      "url": "https://academyglowup.cz",
+      "image": "https://academyglowup.cz/images/petra.png",
+      "description": "Provázím ženy i muže cestou ke zdraví, rovnováze a vnitřní síle",
+      "sameAs": [
+        "https://www.instagram.com/fakenberg.academy/",
+        "https://www.facebook.com/people/Petra-Fakenberg-GlowUp/",
+        "https://www.youtube.com/channel/UCGDH2OtCP9glclqwubEzJfg"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data - Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Online Koučování a Výživové Poradenství",
+      "provider": {
+        "@type": "Organization",
+        "name": "Academy GlowUp"
+      },
+      "areaServed": "CZ",
+      "availableLanguage": "Czech",
+      "description": "Komplexní online koučování zahrnující mindset, výživu, pohyb a práci s myslí"
+    }
+    </script>
 </head>
 
 <body>
     <!-- Navigation -->
     <nav id="navbar">
-        <img src="images/logo.png" alt="Academy GlowUp Logo" class="logo">
+        <img src="images/logo2.png" alt="Academy GlowUp Logo - Online Koučování" class="logo">
         <div class="nav-toggle" id="navToggle">
             <span></span>
             <span></span>
@@ -27,7 +125,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero " id="home">
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Online koučování a kurzy na míru</h1>
@@ -41,7 +139,7 @@
                     <li>jak si vybudovat zdravý životní styl</li>
                 </ul>
 
-                <h3>Rezonuje to s Tebou?</h3>
+                <h2 class="fade-in">Rezonuje to s Tebou?</h2>
                 <ul class="hero-list">
                     <li>Ušetři si roky zkoušení slepých cest a hledání návodů bez výsledku</li>
                     <li>Využij mých zkušeností a najdi cestu, která funguje</li>
@@ -49,13 +147,13 @@
 
                 <p class="hero-tagline">Tak na co stále čekáš?</p>
 
-                <a href="#offerings" class="hero-cta">Ukázka zdarma</a>
+                <a href="#offerings" class="hero-cta">Produkty zdarma</a>
             </div>
 
             <div class="hero-photo">
-                <img src="images/petra.png" alt="Petra Fakenberg">
+                <img src="images/petra.png" alt="Petra Fakenberg - Lektorka a koučka lifestyle">
                 <div class="hero-nameplate">
-                    <h4>Petra Fakenberg</h4>
+                    <h3>Petra Fakenberg</h3>
                     <span>Lektorka a koučka lifestyle</span>
                 </div>
             </div>
@@ -64,7 +162,6 @@
 
 
     <!-- About Section -->
-
     <section class="about fade-in" id="about">
         <div class="about-container">
             <div class="about-text">
@@ -78,7 +175,7 @@
                     dokonalost.</p>
 
                 <p>Věřím, že každý může znovu objevit svou sílu a rovnováhu. Vytvářím bezpečný a inspirativní prostor,
-                    kde se můžete zastavit, nadechnout a začít svou vlastní cestu ke zdraví, energii a vnitřnímu klidu.
+                    kde se můžeš zastavit, nadechnout a začít svou vlastní cestu ke zdraví, energii a vnitřnímu klidu.
                 </p>
 
                 <div class="mission">
@@ -87,14 +184,15 @@
                         je, když se znovu najde.</p>
                     <p>Mým posláním je vytvářet bezpečný prostor pro všechny, které cítí, že chtějí žít jinak -
                         vědoměji,
-                        zdravěji, opravdověji. Pomáhám jim znovu se napojit na své tělo, cyklus a intuici.</p>
+                        zdravěji, opravdověji. Pomáhám všem znovu se napojit na své tělo, cyklus a intuici.</p>
                     <p><strong>Pro mě není větší radosti, než když vidím, jak se vám rozzáří oči - v ten okamžik vím,
                             že jste se dotkli sami sebe. A přesně kvůli tomu tu jsem.</strong></p>
                 </div>
 
                 <div class="credentials">
-                    <p><strong>Vědomosti, které vám předávám:</strong> Jsem Lektor a Kouč Lifestyle společně s výživovým
-                        poradenstvím. Věřím, že každá žena si zaslouží podporu postavenou na pevných základech - nejen
+                    <p><strong>Vědomosti, které předávám:</strong> Jsem Lektor a Kouč Lifestyle společně s výživovým
+                        poradenstvím. Věřím, že každý muž a žena si zaslouží podporu postavenou na pevných základech -
+                        nejen
                         životních zkušenostech, ale i ověřených informacích.</p>
                 </div>
 
@@ -104,24 +202,27 @@
                     <span class="value-tag">Laskavost k sobě</span>
                     <span class="value-tag">Autenticita</span>
                     <span class="value-tag">Zdraví</span>
-                    <span class="value-tag">Ženská síla</span>
+                    <span class="value-tag">Psychosomatika</span>
                     <span class="value-tag">Rovnováha</span>
+                    <span class="value-tag">lifestyle</span>
+                    <span class="value-tag">Příroda</span>
                 </div>
             </div>
             <div>
                 <div class="video-container">
+                    <iframe data-src="https://www.youtube.com/embed/3tc4CE2mdBw?si=v_O1alLQekqdTNi4" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen class="lazy-iframe" title="Poznejte mě a můj přístup - Academy GlowUp"></iframe>
+                </div>
+                <p class="video-description">Poznejte mě a můj přístup</p>
+                <div class="video-container">
                     <iframe data-src="https://www.youtube.com/embed/A_HgMOfssR4?si=6hV3plhCyej7blvJ" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen class="lazy-iframe"></iframe>
+                        allowfullscreen class="lazy-iframe" title="Moje osobní zpověď - cesta k zdraví"></iframe>
                 </div>
                 <p class="video-description">Podívejte se na mou osobní zpověď - mou cestu od nemocí a neplodnosti k
                     zdraví, energii a životní spokojenosti.</p>
-                <div class="video-container">
-                    <iframe data-src="https://www.youtube.com/embed/3tc4CE2mdBw?si=v_O1alLQekqdTNi4" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen class="lazy-iframe"></iframe>
-                </div>
-                <p class="video-description">Poznejte mě a můj přístup</p>
+
             </div>
         </div>
     </section>
@@ -134,7 +235,7 @@
 
             <div class="offerings-grid">
                 <!-- Check list ZDARMA -->
-                <div class="offering-card" style="border: 3px solid #4a7c59;">
+                <article class="offering-card" style="border: 3px solid #4a7c59;">
                     <h3>Check List ZDARMA</h3>
                     <div class="price" style="color: #d4af37;">ZDARMA</div>
                     <p>Jak eliminovat stres před zkouškou nebo pracovním pohovorem - praktický check list, který vás
@@ -146,10 +247,10 @@
                         <li>Okamžitě ke stažení</li>
                     </ul>
                     <button class="offering-btn" onclick="openPopup('checklist')">Stáhnout Zdarma</button>
-                </div>
+                </article>
 
                 <!-- E-book ZDARMA -->
-                <div class="offering-card" style="border: 3px solid #4a7c59;">
+                <article class="offering-card" style="border: 3px solid #4a7c59;">
                     <h3>E-book ZDARMA</h3>
                     <div class="price" style="color: #d4af37;">ZDARMA</div>
                     <p>Deset potravin, které podpoří vaši plodnost - jednoduché a praktické tipy pro ženy, které chtějí
@@ -161,7 +262,7 @@
                         <li>Okamžitě ke stažení</li>
                     </ul>
                     <button class="offering-btn" onclick="openPopup('ebook')">Stáhnout Zdarma</button>
-                </div>
+                </article>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
@@ -171,23 +272,23 @@
     </section>
 
     <!-- Popup Modal -->
-    <div id="downloadPopup" class="popup-overlay">
+    <div id="downloadPopup" class="popup-overlay" role="dialog" aria-labelledby="popupTitle" aria-modal="true">
         <div class="popup-content">
-            <button class="popup-close" onclick="closePopup()">&times;</button>
-            <h2>Stáhnout materiál zdarma</h2>
+            <button class="popup-close" onclick="closePopup()" aria-label="Zavřít">&times;</button>
+            <h2 id="popupTitle">Stáhnout materiál zdarma</h2>
             <p>Vyplňte prosím své údaje pro stažení materiálu</p>
             <form id="downloadForm" class="popup-form">
                 <div class="form-group">
                     <label for="userName">Jméno a příjmení *</label>
-                    <input type="text" id="userName" name="userName" required>
+                    <input type="text" id="userName" name="userName" required aria-required="true">
                 </div>
                 <div class="form-group">
                     <label for="userEmail">E-mail *</label>
-                    <input type="email" id="userEmail" name="userEmail" required>
+                    <input type="email" id="userEmail" name="userEmail" required aria-required="true">
                 </div>
 
                 <div class="gdpr-checkbox">
-                    <input type="checkbox" id="gdprConsent" name="gdprConsent" required>
+                    <input type="checkbox" id="gdprConsent" name="gdprConsent" required aria-required="true">
                     <label for="gdprConsent">
                         Souhlasím se <a href="gdpr.html" target="_blank">zásadami ochrany osobních údajů</a> *
                     </label>
@@ -209,12 +310,15 @@
     <section class="social">
         <h2>Pojďme zůstat v kontaktu</h2>
         <div class="social-links">
-            <a href="https://www.instagram.com/fakenberg.academy/" class="social-link" target="_blank"><img
-                    src="images/instagramICO.png" alt="Instagram"></a>
+            <a href="https://www.instagram.com/fakenberg.academy/" class="social-link" target="_blank"
+                rel="noopener noreferrer" aria-label="Instagram Academy GlowUp"><img src="images/instagramICO.png"
+                    alt="Instagram"></a>
             <a href="https://www.facebook.com/people/Petra-Fakenberg-GlowUp/pfbid02P6bLwimZMNFLdcYLVyLMQSuaoegfiZ6qdrHW7BNuUcMjPQFs5eP5b6QF7qxrckXSl/"
-                class="social-link" target="_blank"><img src="images/facebookICO.png" alt="Facebook"></a>
-            <a href="https://www.youtube.com/channel/UCGDH2OtCP9glclqwubEzJfg" class="social-link" target="_blank"><img
-                    src="images/youtubeICO.png" alt="YouTube"></a>
+                class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook Petra Fakenberg"><img
+                    src="images/facebookICO.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/channel/UCGDH2OtCP9glclqwubEzJfg" class="social-link" target="_blank"
+                rel="noopener noreferrer" aria-label="YouTube Academy GlowUp"><img src="images/youtubeICO.png"
+                    alt="YouTube"></a>
         </div>
     </section>
 
@@ -225,8 +329,8 @@
         <div class="footer-content container">
             <p>&copy; 2025 Academy GlowUp. Všechna práva vyhrazena.</p>
             <div class="footer-logo">
-                <a href="https://stebex.cz/" target="_blank">
-                    <p>Web vytořil: </p>
+                <a href="https://stebex.cz/" target="_blank" rel="noopener noreferrer">
+                    <p>Web vytvořil </p>
                     <img src="https://imagedelivery.net/TtlFh2d-eb4ze5NHgekWCg/62abbdec-cbc3-45a1-6701-8a6b4ed2b800/public"
                         alt="Stebex logo">
                 </a>
@@ -242,4 +346,4 @@
     <script src="js/email-handler.js" defer></script>
 </body>
 
-</html>
+</html
