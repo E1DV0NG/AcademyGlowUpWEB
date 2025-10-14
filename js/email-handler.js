@@ -2,11 +2,11 @@
 // Konfigurace EmailJS - VYPLŇTE VLASTNÍ ÚDAJE
 // Návod k nastavení: https://www.emailjs.com/
 const EMAILJS_CONFIG = {
-  publicKey: "YOUR_PUBLIC_KEY", // Získejte na https://dashboard.emailjs.com/admin/account
-  serviceId: "YOUR_SERVICE_ID", // ID vašeho emailové služby (např. service_abc123)
+  publicKey: "M-53nojOKgudSHGhZ", // Získejte na https://dashboard.emailjs.com/admin/account
+  serviceId: "service_jp0y46s", // ID vašeho emailové služby (např. service_abc123)
   templateIds: {
-    download: "YOUR_DOWNLOAD_TEMPLATE_ID", // Template ID pro stažení materiálů
-    contact: "YOUR_CONTACT_TEMPLATE_ID", // Template ID pro kontaktní formulář
+    download: "template_t4ch6sz", // Template ID pro stažení materiálů
+    contact: "template_td9bbb9", // Template ID pro kontaktní formulář
   },
 };
 
@@ -77,19 +77,29 @@ window.closePopup = function () {
   currentDownloadType = null;
 };
 
-async function sendDownloadEmail(userName, userEmail, downloadType) {
+async function sendDownloadEmail(
+  userName,
+  userEmail,
+  downloadType,
+  gdprConsent,
+  marketingConsent
+) {
   try {
     await loadEmailJS();
 
     const templateParams = {
-      to_name: userName,
-      to_email: userEmail,
+      user_name: userName,
+      user_email: userEmail,
       download_type: downloadType,
       download_date: new Date().toLocaleString("cs-CZ"),
       material_name:
         downloadType === "checklist"
           ? "Check List - Jak eliminovat stres před zkouškou"
           : "E-book - Deset potravin, které podpoří vaši plodnost",
+      gdpr_consent: gdprConsent ? "ANO - povinný souhlas" : "NE",
+      marketing_consent: marketingConsent
+        ? "ANO - souhlasí s marketingem"
+        : "NE - nesouhlasí",
     };
 
     await emailjs.send(
@@ -98,12 +108,11 @@ async function sendDownloadEmail(userName, userEmail, downloadType) {
       templateParams
     );
 
-    console.log("Download email sent successfully");
+    console.log("Download notification sent to Petra");
     return true;
   } catch (error) {
-    console.error("Error sending download email:", error);
-    // Pokračujeme se stažením i při chybě emailu
-    return false;
+    console.error("Error sending download notification:", error);
+    throw error; // Propagujeme chybu - bez emailu nedovolíme stažení
   }
 }
 
@@ -197,6 +206,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const userName = document.getElementById("userName").value.trim();
       const userEmail = document.getElementById("userEmail").value.trim();
+      const gdprConsent = document.getElementById("gdprConsent").checked;
+      const marketingConsent =
+        document.getElementById("marketingConsent").checked;
+      const submitBtn = downloadForm.querySelector('button[type="submit"]');
 
       // Validace
       if (!userName || !userEmail) {
@@ -210,19 +223,48 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Odeslat email (na pozadí)
-      sendDownloadEmail(userName, userEmail, currentDownloadType);
-
-      // Spustit stažení
-      const downloaded = initiateDownload(currentDownloadType);
-
-      if (downloaded) {
-        alert("Děkujeme! Váš materiál byl stažen.");
-      } else {
-        alert("Omlouváme se, materiál není momentálně dostupný.");
+      // Kontrola GDPR souhlasu (povinné)
+      if (!gdprConsent) {
+        alert(
+          "Pro stažení materiálu musíte souhlasit se zásadami ochrany osobních údajů"
+        );
+        return;
       }
 
-      closePopup();
+      // Zobrazit loading stav
+      setButtonLoading(submitBtn, true);
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Odesílám...";
+
+      try {
+        // NEJDŘÍV odeslat email Petře s informací o souhlasech
+        await sendDownloadEmail(
+          userName,
+          userEmail,
+          currentDownloadType,
+          gdprConsent,
+          marketingConsent
+        );
+
+        // Teprve PO úspěšném odeslání spustit stažení
+        const downloaded = initiateDownload(currentDownloadType);
+
+        if (downloaded) {
+          alert("Děkujeme! Váš materiál se stahuje.");
+        } else {
+          alert("Omlouváme se, materiál není momentálně dostupný.");
+        }
+
+        closePopup();
+      } catch (error) {
+        // Pokud email selže, NEpovolíme stažení
+        alert(
+          "Omlouváme se, došlo k chybě při odesílání. Prosím zkuste to znovu."
+        );
+      } finally {
+        setButtonLoading(submitBtn, false);
+        submitBtn.textContent = originalText;
+      }
     });
   }
 

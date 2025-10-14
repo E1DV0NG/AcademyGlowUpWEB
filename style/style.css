@@ -1094,6 +1094,9 @@ footer {
   align-items: center;
   overflow: hidden;
 }
+footer p {
+  padding-right: 1rem;
+}
 
 .footer-background {
   position: absolute;
@@ -1239,6 +1242,13 @@ footer {
   );
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(74, 124, 89, 0.2);
+}
+
+.contact-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .contact-detail h3 {
